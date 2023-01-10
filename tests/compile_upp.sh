@@ -79,6 +79,8 @@ if [[ $MACHINE_ID != "unknown" ]]; then
    module list
 fi
 
+echo $modulefile
+
 rm -rf build install
 mkdir build && cd build
 cmake $cmake_opts ../..

@@ -128,6 +128,10 @@ case $(hostname -f) in
   *) MACHINE_ID=unknown
 esac
 
+if [[ "$PLATFORM" == axiom ]] ; then
+   MACHINE_ID=$PLATFORM
+fi
+
 # Overwrite auto-detect with RT_MACHINE if set
 MACHINE_ID=${RT_MACHINE:-${MACHINE_ID}}
 
