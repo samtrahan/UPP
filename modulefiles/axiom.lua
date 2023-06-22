@@ -5,9 +5,7 @@ Load environment to build post on hera
 -- cmake_ver=os.getenv("cmake_ver") or "3.20.1"
 -- load(pathJoin("cmake", cmake_ver))
 
-prepend_path("MODULEPATH", "/lustre/save/spack-stack/envs/ubuntu20-intel2022.2-override-openmpi-v2/install/modulefiles/Core")
-prepend_path("MODULEPATH", "/lustre/save/spack-stack/envs/ubuntu20-intel2022.2-override-openmpi-v2/install/modulefiles/")
-
+load("spack-stack")
 load("stack-intel/2021.6.0")
 load("stack-openmpi/4.1.5")
 
